@@ -17,6 +17,7 @@ function formSubmitHandler(event) {
     event.preventDefault();
     const email = emailInput.value;
     const message = messageInput.value;
+    if (email === "" || message === "") return;
     console.log({ email, message })
     localStorage.removeItem(storageKey)
     form.reset();
